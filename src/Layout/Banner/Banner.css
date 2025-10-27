@@ -1,0 +1,118 @@
+.section-banner {
+  position: relative;
+  width: 100%;
+  /* altura: pantalla completa menos header + main-nav (desktop) */
+  height: calc(70vh - (var(--header-height) + var(--main-nav-height)));
+  margin-top: calc(var(--header-height) + var(--main-nav-height));
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* overlay */
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.579);
+  z-index: 1;
+}
+
+/* contenido por encima del overlay */
+.banner-content {
+  color: #fff;
+  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.752);
+  /* position: relative; */
+  z-index: 2;
+  padding: 1rem;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 👉 derecha en desktop */
+  text-align: right; /* 👉 derecha en desktop */
+}
+
+.titulo-banner {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.parrafo-banner {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.999);
+}
+
+/* contenedor que centra el botón horizontalmente */
+.banner-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+/* el anchor se usa como botón */
+.banner-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transition: background var(--transition-duration), transform 0.15s;
+}
+
+.banner-cta:hover {
+  background: var(--background-color);
+  transform: translateY(-2px);
+  color: var(--primary-color);
+}
+
+/* icono dentro del botón */
+.cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 597px) {
+
+  .section-banner {
+    height: calc(60vh - var(--header-height));
+    margin-top: var(--header-height);
+    background-position: left center;
+  }
+
+  .banner-content {
+    max-width: 300px; /* más ancho para texto centrado */
+    align-items: center; /* 👉 centrado vertical */
+    text-align: center; /* 👉 centrado horizontal */
+  }
+
+  .overlay {
+    justify-content: center; /* 👉 centrado del overlay */
+  }
+
+  .banner-btn-container {
+    justify-content: center; /* 👉 botón centrado */
+  }
+
+  .titulo-banner {
+    font-size: 2rem;
+  }
+
+  .parrafo-banner {
+    font-size: 1rem;
+  }
+}

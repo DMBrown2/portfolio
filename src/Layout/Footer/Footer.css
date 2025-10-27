@@ -1,0 +1,49 @@
+.site-footer {
+  background-color: #b5bdbc;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--primary-color);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons a {
+  color: var(--font-color);
+  transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+  color: var(--primary-color);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #464545;
+}
+section {
+  scroll-margin-top: 80px; /* ajustá según el alto de tu header */
+}

@@ -1,0 +1,146 @@
+/* --- ANIMACIONES --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about {
+  width: 100%;
+  padding: 4rem 10vw;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--text-color, #333);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--font-color);
+}
+
+/* === Cards container === */
+.about-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* === Individual card === */
+.about-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.556);
+}
+
+.about-card-icon {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.about-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.about-card-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* === Tech list === */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  width: 80px;
+}
+
+.tech-icon {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.4rem;
+}
+
+.method-tag {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* === Botón CV === */
+.cv-btn-container {
+  margin-top: 3rem;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cv-btn:hover {
+  background: var(--background-color);
+  transform: translateY(-2px);
+  color: var(--primary-color);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 250px;
+  }
+}

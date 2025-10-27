@@ -1,0 +1,20 @@
+.titulo {
+    font-size: 50px;
+    color: var(--font-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtitulo {
+    font-size: 24px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.otrotitulo{
+    font-size: 30px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 15px;
+}

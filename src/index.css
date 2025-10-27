@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    text-transform: none;
+}
+
+:root {
+    --primary-color: #ee0750;
+    --secondary-color: #8deba8;
+    --font-color: #133363;
+    --background-color: #9af8f8;
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+
+    /* alturas del header / main-nav para calcular el offset del banner */
+    --header-height: 60px;     /* coincide con .main-header height */
+    --main-nav-height: 45px;   /* coincide con .main-header .main-nav height en desktop */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Raleway', sans-serif;
+}
