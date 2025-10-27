@@ -1,7 +1,7 @@
 import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import "./contact.css";
+import "./Contact.css";
 
 export default function Contact() {
   return (
