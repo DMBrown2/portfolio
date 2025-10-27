@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <h2>Contacto</h2>
-      <p>¿Querés hablar sobre proyectos o colaboraciones? ¡Hablemos!</p>
+      <p>Actualmente me encuentro en búsqueda activa de una posición en relación de dependencia, donde pueda seguir creciendo como desarrolladora web y aportar valor a nuevos proyectos.</p>
 
       <div className="contact-links">
         <a
