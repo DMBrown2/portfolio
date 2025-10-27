@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { FaCode, FaUserGraduate } from "react-icons/fa";
 import { SiJavascript, SiReact, SiNodedotjs, SiMongodb, SiHtml5, SiCss3, SiJirasoftware, SiTrello } from "react-icons/si";
-import "./about.css";
+import "./About.css";
 
 const About = () => {
    // Agregar clase visible cuando los elementos entran en vista
