@@ -2,7 +2,7 @@
   background-color: #b5bdbc;
   color: #eee;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 0rem;
 }
 
 .footer-nav {
@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   gap: 1.2rem;
-  margin-bottom: 1.5rem;
 }
 
 .footer-icons a {
@@ -51,6 +50,6 @@ section {
 
 @media (max-width: 768px) {
   section {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 40px;
   }
 }

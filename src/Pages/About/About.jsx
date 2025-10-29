@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaCode, FaUserGraduate } from "react-icons/fa";
 import { SiJavascript, SiReact, SiNodedotjs, SiMongodb, SiHtml5, SiCss3, SiJirasoftware, SiTrello } from "react-icons/si";
+import { Link } from "react-scroll";
 import "./About.css";
 
 const About = () => {
@@ -92,9 +93,15 @@ const About = () => {
       </div>
 
       <div className="cv-btn-container reveal">
-        <a href="/cv-daniela-brown.pdf" className="cv-btn" download>
-          Descargar CV
-        </a>
+        <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-60}
+              className="cv-btn"
+            >
+          Contactame para descargar mi CV
+        </Link>
       </div>
     </section>
   );

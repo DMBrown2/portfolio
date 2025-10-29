@@ -10,7 +10,7 @@ export default function Banner() {
 
         <div className="banner-content">
           <h1 className="titulo-banner">Full Stack Developer</h1>
-          <p className="parrafo-banner">Construyo soluciones web modernas, escalables y atractivas.</p>
+          <p className="parrafo-banner">Diseño y programo soluciones digitales que funcionan bien, y son fáciles de usar</p>
 
           <div className="banner-btn-container">
             <a 

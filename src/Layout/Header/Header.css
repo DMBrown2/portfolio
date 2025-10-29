@@ -69,20 +69,16 @@
 }
 
 .main-header .contenedor-logo {
-    position: absolute;
-    left: 10px;
-    width: 50px;
+    width: 75px;
 }
 
 .main-header .contenedor-logo .logo {
     width: 100%;
     height: auto;
     cursor: pointer;
-    color: black;
 }
 .contenedor-logo .nav-link {
-    display: flex;
-    
+    display: flex;   
 }
 
 .nav-overlay {

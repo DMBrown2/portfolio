@@ -23,7 +23,6 @@
 /* contenido por encima del overlay */
 .banner-content {
   color: #fff;
-  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.752);
   /* position: relative; */
   z-index: 2;
   padding: 1rem;
@@ -31,7 +30,7 @@
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* 👉 derecha en desktop */
+  /* align-items: flex-end; 👉 derecha en desktop */
   text-align: right; /* 👉 derecha en desktop */
 }
 
@@ -39,13 +38,13 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 4px 12px rgba(6, 6, 6, 0.7);
 }
 
 .parrafo-banner {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.999);
+  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.999);
 }
 
 /* contenedor que centra el botón horizontalmente */
@@ -102,6 +101,7 @@
 
   .overlay {
     justify-content: center; /* 👉 centrado del overlay */
+      background: rgba(0, 0, 0, 0.579);
   }
 
   .banner-btn-container {

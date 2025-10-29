@@ -28,7 +28,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <p className="footer-copy">© 2025 Daniela Brown. Todos los derechos reservados.</p>
+      {/* <p className="footer-copy">© 2025 Daniela Brown. Todos los derechos reservados.</p> */}
     </footer>
   );
 }

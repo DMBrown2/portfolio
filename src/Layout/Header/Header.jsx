@@ -1,9 +1,7 @@
 import { useRef } from 'react';
 import './Header.css';
 import { Link } from 'react-scroll';
-// import logo from '../../assets/Logo/logo.webp';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faLaptopCode } from '@fortawesome/free-solid-svg-icons/faLaptopCode';
+import logo from '../../assets/logo/logo-dani.png';
 
 
 
@@ -27,13 +25,11 @@ const burgerRef = useRef();
       {/* CLAIM + LOGO + USER INFO  */}
       <div className="contenedor-logo">
         <a href="#inicio" className="nav-link">
-            ACÁ VA UN LOGO
-          {/* <img
+          <img
             className="logo"
             src={logo}
             alt="LOGO"
           />
-        <FontAwesomeIcon className='logo' icon={faLaptopCode} /> */}
         </a>
 
       </div>
@@ -64,7 +60,7 @@ const burgerRef = useRef();
               to="proyectos"
               smooth={true}
               duration={500}
-              offset={-80}
+              offset={-60}
               className="nav-link"
               onClick={closeMenu}
             >
