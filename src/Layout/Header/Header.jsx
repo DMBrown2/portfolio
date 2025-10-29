@@ -1,8 +1,7 @@
 import { useRef } from 'react';
 import './Header.css';
 import { Link } from 'react-scroll';
-import logo from '../../assets/logo/logo-dani.png';
-
+import logodani from '../../assets/Logo/logodani.png';
 
 
 export default function Header() {
@@ -27,7 +26,7 @@ const burgerRef = useRef();
         <a href="#inicio" className="nav-link">
           <img
             className="logo"
-            src={logo}
+            src={logodani}
             alt="LOGO"
           />
         </a>
