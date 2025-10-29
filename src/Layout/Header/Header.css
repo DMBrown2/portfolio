@@ -94,6 +94,29 @@
     top: 60px;
     bottom: 0;
     transition: right .3s ease-in-out;
+    z-index: 200;
+}
+
+/* overlay (invisible por defecto) y se activa cuando el burger está checked */
+.nav-overlay {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 200px;
+        bottom: 0;
+        z-index: 99;
+        pointer-events: none;
+        display: none;
+    }
+
+/* al chequear el burger mostramos overlay y abrimos nav */
+    .input-burger:checked ~ .nav-overlay {
+        display: block;
+        pointer-events: auto;
+    }
+
+    .input-burger:checked ~ .main-nav {
+    right: 0 !important;
 }
 
 .main-header .main-nav .nav-list li.nav-item {
@@ -114,28 +137,6 @@
     cursor: pointer;
 }
 
-/* Overlay para mobile */
-@media screen and (max-width: 768px) {
-    .nav-overlay {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 200px;
-        bottom: 0;
-        z-index: 99;
-        pointer-events: none;
-        display: none;
-    }
-
-    .input-burger:checked ~ .nav-overlay {
-        display: block;
-        pointer-events: auto;
-    }
-
-    .main-nav {
-        z-index: 200;
-    }
-}
 
 /* Navegación en desktop */
 @media screen and (min-width: 769px) {
@@ -144,10 +145,12 @@
         flex-direction: row;
     }
 
+     /* ocultamos burger en desktop */
     .main-header .burger-container {
         display: none;
     }
 
+    /* nav en desktop: horizontal, dentro del header */
     .main-header .main-nav {
         position: absolute;
         right: 0;
@@ -166,5 +169,11 @@
 
     .main-header .main-nav .nav-list li.nav-item a.nav-link {
         font-size: 14px;
+    }
+
+     /* en desktop el overlay nunca debe mostrarse (burger oculto), aseguramos comportamiento */
+    .nav-overlay {
+        display: none !important;
+        pointer-events: none !important;
     }
 }

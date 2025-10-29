@@ -92,7 +92,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="cv-btn-container reveal">
+      {/* <div className="cv-btn-container reveal">
         <Link
               to="contact"
               smooth={true}
@@ -100,9 +100,10 @@ const About = () => {
               offset={-60}
               className="cv-btn"
             >
-          Contactame para descargar mi CV
+          Contactame para pedir mi CV
         </Link>
-      </div>
+      </div> */}
+
     </section>
   );
 };

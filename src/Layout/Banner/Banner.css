@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   /* altura: pantalla completa menos header + main-nav (desktop) */
-  height: calc(70vh - (var(--header-height) + var(--main-nav-height)));
+  height: calc(400px - (var(--header-height) + var(--main-nav-height)));
   margin-top: calc(var(--header-height) + var(--main-nav-height));
   background-size: cover;
   background-position: center;
@@ -23,14 +23,14 @@
 /* contenido por encima del overlay */
 .banner-content {
   color: #fff;
-  /* position: relative; */
+  position: relative;
   z-index: 2;
   padding: 1rem;
   width: 100%;
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; 👉 derecha en desktop */
+  align-items: center; /*👉 derecha en desktop*/
   text-align: right; /* 👉 derecha en desktop */
 }
 
@@ -85,13 +85,18 @@
 
 
 /* 📱 Mobile */
-@media (max-width: 597px) {
+@media (max-width: 769px) {
 
   .section-banner {
-    height: calc(60vh - var(--header-height));
-    margin-top: var(--header-height);
-    background-position: left center;
-  }
+  position: relative;
+  width: 100%;
+  /* altura: pantalla completa menos header + main-nav (desktop) */
+  height: calc(70vh - (var(--header-height)));
+  margin-top: var(--header-height);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
   .banner-content {
     max-width: 300px; /* más ancho para texto centrado */
