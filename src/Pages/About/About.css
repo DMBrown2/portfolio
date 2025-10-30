@@ -27,13 +27,62 @@
 
 .about-text {
   max-width: 700px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 1rem auto;
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--font-color);
 }
 
-/* === Cards container === */
+/* === Nueva sección "En qué creo" === */
+.beliefs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  margin: 2rem;
+  color: var(--primary-color);
+}
+
+.beliefs-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.belief-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  font-weight: 500;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.412);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 150px;
+}
+
+/* .belief-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(39, 39, 39, 0.84);
+} */
+
+.belief-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* === Subtítulo perfil técnico === */
+
+/* === Cards === */
 .about-cards-container {
   display: flex;
   justify-content: center;
@@ -41,11 +90,6 @@
   flex-wrap: wrap;
 }
 
-a {
-  text-decoration: none;
-}
-
-/* === Individual card === */
 .about-card {
   background: #fff;
   border-radius: 1rem;
@@ -54,6 +98,10 @@ a {
   width: 250px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a {
+  text-decoration: none;
 }
 
 .about-card:hover {
@@ -111,30 +159,6 @@ a {
   color: #444;
 }
 
-/* === Botón CV === */
-.cv-btn-container {
-  margin-top: 3rem;
-}
-
-.cv-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--primary-color);
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.cv-btn:hover {
-  background: var(--background-color);
-  transform: translateY(-2px);
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .about {
@@ -143,6 +167,10 @@ a {
 
   .about-text {
     font-size: 1rem;
+  }
+
+  .beliefs-tags span {
+    font-size: 0.9rem;
   }
 
   .about-card {

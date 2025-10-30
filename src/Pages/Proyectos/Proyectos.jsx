@@ -8,22 +8,22 @@ import taxiwebImg from '../../assets/proyectos/taxiweb.png'
 
 const proyectos = [
   {
-    titulo: 'Ecommerce de libros',
-    subtitulo: 'TP final del bootcamp de desarrollo web full stack de Educación IT.',
+    titulo: 'Ecommerce de libros - TP Integrador',
+    subtitulo: 'Hice el diseño y desarrollé el frontend en React y el backend con Node.js, Express y MongoDB. Implementé login con token y CRUD de productos.',
     img: ecommerceImg,
     repo: 'https://github.com/DMBrown2/Integrador_Dani-Brown-ENTREGA-3-FRONTEND',
     demo: 'https://integrador-dani-brown-entrega-3-frontend.onrender.com'
   },
   {
-    titulo: 'Prototipo app mobile',
-    subtitulo: 'Prototipo mobile desarrollado con React Native. Proyecto freelance.',
+    titulo: 'Prototipo App Mobile - News Aggregator',
+    subtitulo: 'Propuse la arquitectura pensando en la experiencia de usuario, con diseño inspirado en redes sociales, desarrollado con React Native.',
     img: appbnewsImg,
     repo: 'https://github.com/usuario/proyecto2',
     demo: 'https://prototipobnews.netlify.app/'
   },
   {
     titulo: 'Sitio web Taxi Baires',
-    subtitulo: 'Sitio web para empresa de taxis. Proyecto freelance.',
+    subtitulo: 'Hice la propuesta de diseño y de estructura, desarrollo frontend y optimización responsive.',
     img: taxiwebImg,
     repo: 'https://github.com/DMBrown2/taxibaires',
     demo: 'https://taxibaires.com.ar/'
