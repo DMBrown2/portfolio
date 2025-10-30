@@ -16,7 +16,7 @@ const proyectos = [
   },
   {
     titulo: 'Prototipo app mobile',
-    subtitulo: 'Prototipo desarrollado con React Native. Proyecto freelance.',
+    subtitulo: 'Prototipo mobile desarrollado con React Native. Proyecto freelance.',
     img: appbnewsImg,
     repo: 'https://github.com/usuario/proyecto2',
     demo: 'https://prototipobnews.netlify.app/'

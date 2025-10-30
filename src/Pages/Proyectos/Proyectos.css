@@ -44,7 +44,7 @@
 .proyecto-img-container {
   background: #eee;
   display: block;
-  overflow: hidden;
+  overflow: cover;
   /* mantener una proporción agradable para las capturas sin forzar la altura de la card */
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -87,7 +87,7 @@
   justify-content: space-around;
   align-items: stretch;
   padding: 18px 18px;
-  background: #aaffff;
+  background: #bcf1f1;
 }
 
 .proyecto-link {

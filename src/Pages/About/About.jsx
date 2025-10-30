@@ -24,13 +24,17 @@ const About = () => {
     <section className="about section" id="about">
       <h2 className="section-title reveal">Sobre mí</h2>
       <p className="about-text reveal">
-        Soy Licenciada en Comunicación y Desarrolladora Full Stack con orientación
+        Soy Desarrolladora Full Stack con orientación
         en Frontend. Me apasiona crear experiencias digitales funcionales y atractivas,
         combinando diseño, código y estrategia.
       </p>
 
       <div className="about-cards-container">
         {/* Card 1 - Full Stack */}
+
+        <a href="https://github.com/DMBrown2?tab=repositories" target="_blank" rel="noopener noreferrer" title="Ir a GitHub">
+
+
         <div className="about-card reveal">
           <FaCode className="about-card-icon" />
           <h3 className="about-card-title">Full Stack Engineer</h3>
@@ -64,10 +68,12 @@ const About = () => {
           </div>
         </div>
 
+        </a>
+
         {/* Card 2 - Scrum */}
         <div className="about-card reveal">
           <FaUserGraduate className="about-card-icon" />
-          <h3 className="about-card-title">Scrum Fundamentals</h3>
+          <h3 className="about-card-title">Scrum</h3>
           <p className="about-card-subtitle">Certificación en metodologías ágiles</p>
 
           <div className="tech-list">

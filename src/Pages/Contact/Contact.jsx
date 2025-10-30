@@ -7,7 +7,11 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <h2>Contacto</h2>
-      <p>Actualmente me encuentro en búsqueda activa de una posición en relación de dependencia, donde pueda seguir creciendo como desarrolladora web y aportar valor a nuevos proyectos.</p>
+      
+      <p>Actualmente estoy en búsqueda activa de nuevas oportunidades en el desarrollo web. <br/>
+        Si querés conocer más sobre mi perfil o pensar juntos un proyecto, podés contactarme por cualquiera de los medios de abajo 👇</p>
+      
+      
 
       <div className="contact-links">
         <a
@@ -38,7 +42,7 @@ export default function Contact() {
           <span>LinkedIn</span>
         </a>
 
-        <a
+        {/* <a
           href="https://github.com/DMBrown2"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,7 +50,7 @@ export default function Contact() {
         >
           <Github className="icon" />
           <span>GitHub</span>
-        </a>
+        </a> */}
       </div>
     </section>
   );

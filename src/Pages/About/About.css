@@ -41,6 +41,10 @@
   flex-wrap: wrap;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* === Individual card === */
 .about-card {
   background: #fff;
@@ -67,6 +71,7 @@
   font-size: 1.3rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
+  color: #515151;
 }
 
 .about-card-subtitle {
