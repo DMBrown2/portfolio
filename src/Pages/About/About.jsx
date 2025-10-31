@@ -64,7 +64,7 @@ const About = () => {
 
           <div className="belief-tag">
             <FontAwesomeIcon icon={faPuzzlePiece} className="belief-icon" />
-            <span>La resolución de problemas es algo que puede ser divertido</span>
+            <span>La resolución de problemas impulsa la innovación</span>
           </div>
 
           <div className="belief-tag">
