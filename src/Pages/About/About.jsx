@@ -15,6 +15,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb, faUser, faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons/faPuzzlePiece";
 
+import scrum from '../../assets/about/scrum.png';
+import sprint from '../../assets/about/sprint.png';
+import daily from '../../assets/about/daily.png';
+import retrospectives from '../../assets/about/retrospectives.png';
+
 
 const About = () => {
   useEffect(() => {
@@ -87,7 +92,7 @@ const About = () => {
           title="Ir a GitHub"
         >
           <div className="about-card reveal">
-            <FaCode className="about-card-icon" />
+            <FaCode className="about-card-img" />
             <h3 className="about-card-title">Full Stack Engineer</h3>
             <p className="about-card-subtitle">Bootcamp - Certificación 2025</p>
 
@@ -122,11 +127,12 @@ const About = () => {
 
         {/* Card 2 - Scrum */}
         <div className="about-card reveal">
-          <FaUserGraduate className="about-card-icon" />
-          <h3 className="about-card-title">Scrum</h3>
-          <p className="about-card-subtitle">
-            Certificación en metodologías ágiles
-          </p>
+          {/* <FaUserGraduate className="about-card-icon" /> */}
+          <img src={scrum} alt="scrum" className="about-card-img"/>
+          <h3 className="about-card-title-scrum">Scrum Fundamentos</h3>
+          {/* <p className="about-card-subtitle">
+            Certificación en Scrum Fundamentos
+          </p> */}
 
           <div className="tech-list">
             <div className="tech-item">
@@ -138,12 +144,15 @@ const About = () => {
               <span>Trello</span>
             </div>
             <div className="tech-item">
+              <img src={sprint} alt="sprint" className="tech-icon"/>
               <span className="method-tag">Sprint Planning</span>
             </div>
             <div className="tech-item">
+              <img src={daily} alt="daily" className="tech-icon"/>
               <span className="method-tag">Daily Meetings</span>
             </div>
             <div className="tech-item">
+              <img src={retrospectives} alt="retrospectives" className="tech-icon"/>
               <span className="method-tag">Retrospectives</span>
             </div>
           </div>
