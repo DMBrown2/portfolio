@@ -2,15 +2,19 @@ import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import "./Footer.css";
+import { useContext } from 'react';
+import { LanguageContext } from '../../i18n/LanguageProvider';
 
 export default function Footer() {
+  const { t } = useContext(LanguageContext);
+
   return (
     <footer className="site-footer">
       <nav className="footer-nav">
-        <a href="/">Inicio</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#contact">Contacto</a>
+        <a href="/">{t('header.home')}</a>
+        <a href="#proyectos">{t('proyectos.title')}</a>
+        <a href="#about">{t('header.about')}</a>
+        <a href="#contact">{t('contact.title')}</a>
       </nav>
 
       <div className="footer-icons">

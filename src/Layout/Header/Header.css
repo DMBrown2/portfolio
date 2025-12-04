@@ -42,7 +42,58 @@
     position: absolute;
 }
 
-.main-header .burger-container .burger::before {
+/* Language toggle: container with both flags */
+.lang-toggle {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.lang-toggle .flag-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.lang-toggle .flag-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Active language flag is highlighted */
+.lang-toggle .flag-btn.active {
+  border-color: var(--primary-color);
+  background: rgba(238, 7, 80, 0.1);
+}
+
+.lang-toggle img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+/* On wider screens push language toggle to the right */
+@media (min-width: 660px) {
+  .main-header .lang-toggle {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 659px) {
+  /* mobile: keep the toggle next to the burger */
+  .main-header .lang-toggle {
+    margin-left: 8px;
+  }
+}.main-header .burger-container .burger::before {
     top: -8px;
 }
 

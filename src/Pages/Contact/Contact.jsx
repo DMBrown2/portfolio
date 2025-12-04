@@ -2,17 +2,19 @@ import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import "./Contact.css";
+import { useContext } from 'react';
+import { LanguageContext } from '../../i18n/LanguageProvider';
 
 export default function Contact() {
+  const { t } = useContext(LanguageContext);
+
   return (
     <section id="contact" className="contact-section">
-      <h2>Contacto</h2>
+      <h2>{t('contact.title')}</h2>
       
-      <p>Actualmente estoy en búsqueda activa de nuevas oportunidades en el desarrollo web. <br/>
-        Si querés conocer más sobre mi perfil o pensar juntos un proyecto, podés contactarme por cualquiera de los medios de abajo 👇</p>
+      <p>{t('contact.intro')}<br/>
+        {t('contact.reach')}</p>
       
-      
-
       <div className="contact-links">
         <a
           href="https://wa.me/541164319442"
@@ -21,7 +23,7 @@ export default function Contact() {
           className="contact-card"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="icon" />
-          <span>WhatsApp</span>
+          <span>{t('contact.whatsapp')}</span>
         </a>
 
         <a
@@ -29,7 +31,7 @@ export default function Contact() {
           className="contact-card"
         >
           <Mail className="icon" />
-          <span>Email</span>
+          <span>{t('contact.email')}</span>
         </a>
 
         <a
@@ -39,18 +41,8 @@ export default function Contact() {
           className="contact-card"
         >
           <Linkedin className="icon" />
-          <span>LinkedIn</span>
+          <span>{t('contact.linkedin')}</span>
         </a>
-
-        {/* <a
-          href="https://github.com/DMBrown2"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-card"
-        >
-          <Github className="icon" />
-          <span>GitHub</span>
-        </a> */}
       </div>
     </section>
   );

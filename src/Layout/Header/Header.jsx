@@ -1,11 +1,15 @@
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import './Header.css';
 import { Link } from 'react-scroll';
 import logodani from '../../assets/Logo/logodani.png';
+import usFlag from '../../assets/flags/us.svg';
+import esFlag from '../../assets/flags/es.svg';
+import { LanguageContext } from '../../i18n/LanguageProvider';
 
 
 export default function Header() {
 const burgerRef = useRef();
+const { lang, toggle, t } = useContext(LanguageContext);
 
   // Función para cerrar el menú
   const closeMenu = () => {
@@ -21,6 +25,28 @@ const burgerRef = useRef();
       <label className="burger-container" htmlFor="burger">
         <div className="burger" />
       </label>
+
+      {/* language toggle: show both flags, active one highlighted */}
+      <div className="lang-toggle">
+        <button
+          type="button"
+          className={`flag-btn ${lang === 'es' ? 'active' : ''}`}
+          onClick={() => toggle('es')}
+          aria-label="Español"
+          title="Español"
+        >
+          <img src={esFlag} alt="Español" />
+        </button>
+        <button
+          type="button"
+          className={`flag-btn ${lang === 'en' ? 'active' : ''}`}
+          onClick={() => toggle('en')}
+          aria-label="English"
+          title="English"
+        >
+          <img src={usFlag} alt="English" />
+        </button>
+      </div>
       {/* CLAIM + LOGO + USER INFO  */}
       <div className="contenedor-logo">
         <a href="#inicio" className="nav-link">
@@ -51,7 +77,7 @@ const burgerRef = useRef();
               className="nav-link"
               onClick={closeMenu}
             >
-              Inicio
+              {t ? t('header.home') : 'Inicio'}
             </Link>
           </li>
           <li className="nav-item">
@@ -63,7 +89,7 @@ const burgerRef = useRef();
               className="nav-link"
               onClick={closeMenu}
             >
-              Proyectos
+              {t ? t('proyectos.title') : 'Proyectos'}
             </Link>
           </li>
           <li className="nav-item">
@@ -75,7 +101,7 @@ const burgerRef = useRef();
               className="nav-link"
               onClick={closeMenu}
             >
-              Sobre mi
+              {t ? t('header.about') : 'Sobre mi'}
             </Link>
           </li>
           <li className="nav-item">
@@ -87,7 +113,7 @@ const burgerRef = useRef();
               className="nav-link"
               onClick={closeMenu}
             >
-              Contacto
+              {t ? t('contact.title') : 'Contacto'}
             </Link>
           </li>
         </ul>

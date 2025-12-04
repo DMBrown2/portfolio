@@ -1,6 +1,8 @@
 import './Proyectos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { LanguageContext } from '../../i18n/LanguageProvider';
 
 import ecommerceImg from '../../assets/proyectos/ecommerce.png'
 import appbnewsImg from '../../assets/proyectos/appbnews.png'
@@ -31,24 +33,28 @@ const proyectos = [
 ];
 
 export default function Proyectos() {
+  const { t } = useContext(LanguageContext);
+  const get = (key, fallback) => {
+    const res = t(key);
+    return typeof res === 'string' && res === key ? fallback : res;
+  };
   return (
     <section id="proyectos" className="proyectos-section">
-      <h2 className="proyectos-titulo">Proyectos</h2>
+      <h2 className="proyectos-titulo">{t('proyectos.title')}</h2>
       <div className="proyectos-grid">
         {proyectos.map((p, i) => (
           <div className="proyecto-card" key={i}>
-
-              <a href={p.demo} target="_blank" rel="noopener noreferrer" className="proyecto-img-link" title='Ver proyecto'>
+              <a href={p.demo} target="_blank" rel="noopener noreferrer" className="proyecto-img-link" title={get(`proyectos.view`, 'Ver proyecto')}>
 
             {/* titulo + subtitulo arriba */}
             <div className='texto-card-proyectos'>
-              <h3 className='titulo-card-proyectos'>{p.titulo}</h3>
-              <p className='subtitulo-card-proyectos'>{p.subtitulo}</p>
+              <h3 className='titulo-card-proyectos'>{get(`proyectos.items.${i}.title`, p.titulo)}</h3>
+              <p className='subtitulo-card-proyectos'>{get(`proyectos.items.${i}.subtitle`, p.subtitulo)}</p>
             </div>
 
             {/* imagen del proyecto */}
             <div className="proyecto-img-container">
-                <img src={p.img} alt={p.titulo} className="proyecto-img" />
+                <img src={p.img} alt={get(`proyectos.items.${i}.title`, p.titulo)} className="proyecto-img" />
             </div>
             </a>
 
@@ -56,7 +62,7 @@ export default function Proyectos() {
             <div className="proyecto-links">
               <a href={p.repo} target="_blank" rel="noopener noreferrer" className="proyecto-link">
                 <FontAwesomeIcon icon={faLaptopCode} className="proyecto-link-icon" />
-                Repositorio
+                {t('proyectos.repo')}
               </a>
             </div>
           </div>

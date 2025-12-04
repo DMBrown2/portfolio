@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { FaCode, FaUserGraduate } from "react-icons/fa";
 import {
   SiJavascript,
@@ -11,6 +11,7 @@ import {
   SiTrello,
 } from "react-icons/si";
 import "./About.css";
+import { LanguageContext } from '../../i18n/LanguageProvider';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb, faUser, faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons/faPuzzlePiece";
@@ -36,52 +37,46 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
+  const { t } = useContext(LanguageContext);
+
   return (
     <section className="about section" id="about">
-      <h2 className="section-title reveal">Sobre mí</h2>
+      <h2 className="section-title reveal">{t('about.title')}</h2>
 
-      <p className="about-text reveal">
-        👩‍🦰 Soy Full Stack Developer con orientación en Frontend. Después de varios
-        años gestionando proyectos en agencias de publicidad, decidí volcar mi
-        experiencia en comunicación y estrategia al mundo del desarrollo web.
-      </p>
+      <p className="about-text reveal">{t('about.p1')}</p>
 
-      <p className="about-text reveal">
-        🤓 Me divierte crear algo que sea útil. Disfruto armando experiencias
-        digitales funcionales y atractivas, combinando diseño, código y
-        estrategia para lograr una buena experiencia de usuario.
-      </p>
+      <p className="about-text reveal">{t('about.p2')}</p>
 
       {/* En qué creo */}
       <div className="beliefs reveal">
-        <h3 className="subsection-title">Creo que:</h3>
+        <h3 className="subsection-title">{t('about.beliefsTitle')}</h3>
         <div className="beliefs-tags">
 
           <div className="belief-tag">
             <FontAwesomeIcon icon={faUser} className="belief-icon" />
-            <span>La experiencia del usuario es lo mas importante</span>
+            <span>{t('about.belief1')}</span>
           </div>
-          
+
           <div className="belief-tag">
             <FontAwesomeIcon icon={faLightbulb} className="belief-icon" />
-            <span>La creatividad es el motor en todo</span>
+            <span>{t('about.belief2')}</span>
           </div>
 
           <div className="belief-tag">
             <FontAwesomeIcon icon={faPuzzlePiece} className="belief-icon" />
-            <span>La resolución de problemas impulsa la innovación</span>
+            <span>{t('about.belief3')}</span>
           </div>
 
           <div className="belief-tag">
             <FontAwesomeIcon icon={faUserFriends} className="belief-icon" />
-            <span>El trabajo en equipo hace que pasen cosas buenas</span>
+            <span>{t('about.belief4')}</span>
           </div>
 
         </div>
       </div>
 
       {/* 🧩 Perfil técnico */}
-      <h3 className="subsection-title">Perfil técnico</h3>
+      <h3 className="subsection-title">{t('about.profileTitle')}</h3>
 
       <div className="about-cards-container">
         {/* Card 1 - Full Stack */}
@@ -89,12 +84,12 @@ const About = () => {
           href="https://github.com/DMBrown2?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          title="Ir a GitHub"
+          title={t('about.github')}
         >
-          <div className="about-card reveal">
+            <div className="about-card reveal">
             <FaCode className="about-card-img" />
-            <h3 className="about-card-title">Full Stack Engineer</h3>
-            <p className="about-card-subtitle">Bootcamp - Certificación 2025</p>
+            <h3 className="about-card-title">{t('about.card1Title')}</h3>
+            <p className="about-card-subtitle">{t('about.card1Subtitle')}</p>
 
             <div className="tech-list">
               <div className="tech-item">
@@ -129,7 +124,7 @@ const About = () => {
         <div className="about-card reveal">
           {/* <FaUserGraduate className="about-card-icon" /> */}
           <img src={scrum} alt="scrum" className="about-card-img"/>
-          <h3 className="about-card-title-scrum">Scrum Fundamentos</h3>
+          <h3 className="about-card-title-scrum">{t('about.card2Title')}</h3>
           {/* <p className="about-card-subtitle">
             Certificación en Scrum Fundamentos
           </p> */}
