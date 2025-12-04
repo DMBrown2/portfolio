@@ -43,22 +43,24 @@ export default function Proyectos() {
       <h2 className="proyectos-titulo">{t('proyectos.title')}</h2>
       <div className="proyectos-grid">
         {proyectos.map((p, i) => (
-          <div className="proyecto-card" key={i}>
+          <div className="proyecto-item" key={i}>
+            <div className="proyecto-card">
               <a href={p.demo} target="_blank" rel="noopener noreferrer" className="proyecto-img-link" title={get(`proyectos.view`, 'Ver proyecto')}>
 
-            {/* titulo + subtitulo arriba */}
-            <div className='texto-card-proyectos'>
-              <h3 className='titulo-card-proyectos'>{get(`proyectos.items.${i}.title`, p.titulo)}</h3>
-              <p className='subtitulo-card-proyectos'>{get(`proyectos.items.${i}.subtitle`, p.subtitulo)}</p>
+                {/* titulo + subtitulo arriba */}
+                <div className='texto-card-proyectos'>
+                  <h3 className='titulo-card-proyectos'>{get(`proyectos.items.${i}.title`, p.titulo)}</h3>
+                  <p className='subtitulo-card-proyectos'>{get(`proyectos.items.${i}.subtitle`, p.subtitulo)}</p>
+                </div>
+
+                {/* imagen del proyecto */}
+                <div className="proyecto-img-container">
+                  <img src={p.img} alt={get(`proyectos.items.${i}.title`, p.titulo)} className="proyecto-img" />
+                </div>
+              </a>
             </div>
 
-            {/* imagen del proyecto */}
-            <div className="proyecto-img-container">
-                <img src={p.img} alt={get(`proyectos.items.${i}.title`, p.titulo)} className="proyecto-img" />
-            </div>
-            </a>
-
-            {/* links debajo de la imagen */}
+            {/* botón del repo separado: mismo diseño/clases que antes */}
             <div className="proyecto-links">
               <a href={p.repo} target="_blank" rel="noopener noreferrer" className="proyecto-link">
                 <FontAwesomeIcon icon={faLaptopCode} className="proyecto-link-icon" />

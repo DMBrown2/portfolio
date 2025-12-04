@@ -18,6 +18,15 @@
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: stretch; /* asegurar que los items del row igualen la altura */
+}
+
+.proyecto-item {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
 }
 
 .proyecto-card {
@@ -25,11 +34,12 @@
   border-radius: var(--border-radius);
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   overflow: hidden;
-  width: 320px;
+  width: 100%;
+  flex: 1 1 auto; /* permitir que la card ocupe toda la altura disponible del wrapper */
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between; /* empuja los links al fondo */
+  justify-content: space-between;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -85,10 +95,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: stretch;
-  padding: 18px 18px;
-  background: #bcf1f1;
+  /* padding: 18px 18px; */
+  /* background: #bcf1f1; */
 
 }
 
@@ -121,9 +131,7 @@ background: var(--secondary-color);
     gap: 24px;
     align-items: center;
   }
-  .proyecto-card {
-    /* usar 100% del contenedor y centrar con margin auto para asegurar centrado en pantalla
-       (evita efectos por padding del padre y tamaños relativos al viewport) */
+  .proyecto-item {
     width: 100%;
     max-width: 340px;
     margin: 0 auto;

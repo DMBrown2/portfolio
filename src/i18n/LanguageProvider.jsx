@@ -23,7 +23,7 @@ const translations = {
         },
         {
           title: 'Sitio web Taxi Baires',
-          subtitle: 'Propuesta de diseño y de estructura, desarrollo frontend y optimización responsive.'
+          subtitle: 'Propuesta de diseño y de estructura, desarrollo frontend y optimización responsive. Hosteado en dominio propio, con SEO básico y TAGs de seguimiento para campaña de search.'
         }
       ]
     },
@@ -74,7 +74,7 @@ const translations = {
         },
         {
           title: 'Taxi Baires Website',
-          subtitle: 'Design proposal and structure, frontend development and responsive optimization.'
+          subtitle: "Design and structure proposal, frontend development, and responsive optimization. Hosted on its own domain, with tracking TAGs for a search campaign."
         }
       ]
     },
