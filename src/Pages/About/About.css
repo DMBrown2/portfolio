@@ -94,53 +94,96 @@
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-  width: 250px;
+  width: 320px;
+  height: 380px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-a {
-  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .about-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.556);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.about-card-icon {
-  font-size: 2.2rem;
-  color: var(--primary-color);
-  margin-bottom: 0.8rem;
+/* Fondo con icono */
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.about-card-img {
-  width: 50px;
-  /* height: 50px; */
-  font-size: 2rem;
-  margin-bottom: 0.4rem;
-  color: rgb(74, 70, 70);
+.fullstack-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.about-card-title-scrum {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #515151;
+.scrum-bg {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.card-bg-icon {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.8;
+}
+
+.card-bg-icon-img {
+  width: 100px;
+  height: 100px;
+  opacity: 0.2;
+  filter: brightness(0) invert(1);
+}
+
+.about-card:hover .card-bg {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+/* Overlay que aparece en hover */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+
+.about-card:hover .card-overlay {
+  opacity: 1;
 }
 
 .about-card-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #515151;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .about-card-subtitle {
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  line-height: 1.4;
 }
 
 /* === Tech list === */
@@ -148,30 +191,52 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.9rem;
-  color: #555;
-  width: 80px;
+  font-size: 0.85rem;
+  color: #fff;
+  width: 70px;
 }
 
 .tech-icon {
-  color: var(--primary-color);
+  color: #fff;
   margin-bottom: 0.4rem;
-   width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 
 .method-tag {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  font-size: 0.85rem;
-  color: #444;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 4px 6px;
+}
+
+/* Link de acción */
+.card-link {
+  align-self: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.card-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* 📱 Responsive */

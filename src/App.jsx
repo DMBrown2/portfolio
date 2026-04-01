@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router';
+import { Routes, Route } from 'react-router-dom';
 import Main from './Layout/Main/Main';
 import Inicio from './Pages/Inicio/Inicio';
 import Contact from './Pages/Contact/Contact';

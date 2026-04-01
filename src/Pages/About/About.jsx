@@ -80,14 +80,12 @@ const About = () => {
 
       <div className="about-cards-container">
         {/* Card 1 - Full Stack */}
-        <a
-          href="https://github.com/DMBrown2?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
-          title={t('about.github')}
-        >
-            <div className="about-card reveal">
-            <FaCode className="about-card-img" />
+        <div className="about-card reveal">
+          <div className="card-bg fullstack-bg">
+            <FaCode className="card-bg-icon" />
+          </div>
+          
+          <div className="card-overlay">
             <h3 className="about-card-title">{t('about.card1Title')}</h3>
             <p className="about-card-subtitle">{t('about.card1Subtitle')}</p>
 
@@ -117,38 +115,44 @@ const About = () => {
                 <span>MongoDB</span>
               </div>
             </div>
+            
+            <a href="https://github.com/DMBrown2?tab=repositories" target="_blank" rel="noopener noreferrer" className="card-link">
+              {t('about.github')} →
+            </a>
           </div>
-        </a>
+        </div>
 
         {/* Card 2 - Scrum */}
         <div className="about-card reveal">
-          {/* <FaUserGraduate className="about-card-icon" /> */}
-          <img src={scrum} alt="scrum" className="about-card-img"/>
-          <h3 className="about-card-title-scrum">{t('about.card2Title')}</h3>
-          {/* <p className="about-card-subtitle">
-            Certificación en Scrum Fundamentos
-          </p> */}
+          <div className="card-bg scrum-bg">
+            <img src={scrum} alt="scrum" className="card-bg-icon-img"/>
+          </div>
+          
+          <div className="card-overlay">
+            <h3 className="about-card-title">{t('about.card2Title')}</h3>
+             <p className="about-card-subtitle">{t('about.card2Subtitle')}</p>
 
-          <div className="tech-list">
-            <div className="tech-item">
-              <SiJirasoftware className="tech-icon" />
-              <span>Jira</span>
-            </div>
-            <div className="tech-item">
-              <SiTrello className="tech-icon" />
-              <span>Trello</span>
-            </div>
-            <div className="tech-item">
-              <img src={sprint} alt="sprint" className="tech-icon"/>
-              <span className="method-tag">Sprint Planning</span>
-            </div>
-            <div className="tech-item">
-              <img src={daily} alt="daily" className="tech-icon"/>
-              <span className="method-tag">Daily Meetings</span>
-            </div>
-            <div className="tech-item">
-              <img src={retrospectives} alt="retrospectives" className="tech-icon"/>
-              <span className="method-tag">Retrospectives</span>
+            <div className="tech-list">
+              <div className="tech-item">
+                <SiJirasoftware className="tech-icon" />
+                <span>Jira</span>
+              </div>
+              <div className="tech-item">
+                <SiTrello className="tech-icon" />
+                <span>Trello</span>
+              </div>
+              <div className="tech-item">
+                <img src={sprint} alt="sprint" className="tech-icon"/>
+                <span className="method-tag">Sprint Planning</span>
+              </div>
+              <div className="tech-item">
+                <img src={daily} alt="daily" className="tech-icon"/>
+                <span className="method-tag">Daily Meetings</span>
+              </div>
+              <div className="tech-item">
+                <img src={retrospectives} alt="retrospectives" className="tech-icon"/>
+                <span className="method-tag">Retrospectives</span>
+              </div>
             </div>
           </div>
         </div>

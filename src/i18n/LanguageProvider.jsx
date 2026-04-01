@@ -14,8 +14,8 @@ const translations = {
       view: 'Ver Proyecto',
       items: [
         {
-          title: 'Ecommerce de libros - TP Integrador',
-          subtitle: 'Diseño y desarrollo del frontend en React y el backend con Node.js, Express y MongoDB. Implementación de login con token y CRUD de productos.'
+          title: 'Prototipo App Gestión de gastos',
+          subtitle: 'Gestión y división de gastos entre amigos con categorización y almacenamiento local. Interfaz intuitiva diseñada para la experiencia argentina.'
         },
         {
           title: 'Prototipo App Mobile - News Aggregator',
@@ -49,6 +49,7 @@ const translations = {
       card1Title: 'Full Stack Developer',
       card1Subtitle: 'Bootcamp - Certificación 2025',
       card2Title: 'Scrum Fundamentos',
+      card2Subtitle: 'Certificación Scrum - Educación IT 2025',
       github: 'Ir a GitHub'
     }
   },
@@ -65,8 +66,8 @@ const translations = {
       view: 'View project',
       items: [
         {
-          title: 'Book Ecommerce - Capstone',
-          subtitle: 'Frontend built with React and backend using Node.js, Express and MongoDB. Includes token-based login and product CRUD.'
+          title: 'Expense Division App Prototype',
+          subtitle: 'Manage and split expenses among friends with categorization and local storage. Intuitive interface designed for the Argentine user experience.'
         },
         {
           title: 'Mobile App Prototype - News Aggregator',
@@ -100,6 +101,7 @@ const translations = {
       card1Title: 'Full Stack Developer',
       card1Subtitle: 'Bootcamp - Certification 2025',
       card2Title: 'Scrum Fundamentals',
+      card2Subtitle: 'Scrum Certified - Educacion IT 2025',
       github: 'Go to GitHub'
     }
   }
