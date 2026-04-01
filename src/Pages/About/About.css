@@ -200,19 +200,23 @@
   flex-direction: column;
   align-items: center;
   font-size: 0.85rem;
-  color: #fff;
+  color: #ffffff;
   width: 70px;
 }
 
 .tech-icon {
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 0.4rem;
   width: 32px;
   height: 32px;
 }
 
+img.tech-icon {
+filter: invert(1);
+}
+
 .method-tag {
-  background: rgba(255, 255, 255, 0.15);
+  /* background: rgba(255, 255, 255, 0.15); */
   border-radius: 6px;
   font-size: 0.8rem;
   color: #fff;

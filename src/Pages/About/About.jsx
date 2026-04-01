@@ -142,15 +142,15 @@ const About = () => {
                 <span>Trello</span>
               </div>
               <div className="tech-item">
-                <img src={sprint} alt="sprint" className="tech-icon"/>
+                <img src={sprint} alt="sprint" className="tech-icon image"/>
                 <span className="method-tag">Sprint Planning</span>
               </div>
               <div className="tech-item">
-                <img src={daily} alt="daily" className="tech-icon"/>
+                <img src={daily} alt="daily" className="tech-icon image"/>
                 <span className="method-tag">Daily Meetings</span>
               </div>
               <div className="tech-item">
-                <img src={retrospectives} alt="retrospectives" className="tech-icon"/>
+                <img src={retrospectives} alt="retrospectives" className="tech-icon image"/>
                 <span className="method-tag">Retrospectives</span>
               </div>
             </div>
