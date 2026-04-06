@@ -261,4 +261,10 @@ filter: invert(1);
     width: 100%;
     max-width: 250px;
   }
-}
+
+/* En móvil, mostrar el overlay siempre para mejor UX */
+  .card-overlay {
+    opacity: 1;
+  }
+  }
+
