@@ -14,7 +14,7 @@ const proyectos = [
     subtitulo: 'Gestión y división de gastos entre amigos con categorización y almacenamiento local. Interfaz intuitiva diseñada para la experiencia argentina.',
     img: appgastosImg,
     repo: 'https://github.com/DMBrown2/prototipo-CC',
-    demo: 'https://prototipo-cc.netlify.app/'
+    demo: 'https://appcuentasclaras.com.ar/'
   },
   {
     titulo: 'Prototipo App Mobile - News Aggregator',
